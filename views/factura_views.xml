@@ -21,4 +21,28 @@
             </field>
         </field>
     </record>
+
+    <record id="account_invoice_action" model="ir.actions.act_window">
+        <field name="name">Facturas de venta</field>
+        <field name="res_model">account.invoice</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="account_invoice_view_tree" model="ir.ui.view">
+        <field name="name">account.invoice.view.tree</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-info">rectification == 'rectificativa'</attribute>
+                <attribute name="decoration-success">rectification == 'original'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="rectification" />
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="costumer_sales_invoice_menu" name="Facturas de Venta"
+        parent="account.menu_finance_receivables" action="factura.account_invoice_action" />
 </odoo>
