@@ -38,7 +38,7 @@
                 <attribute name="decoration-success">rectification == 'original'</attribute>
             </xpath>
             <xpath expr="//field[@name='state']" position="after">
-                <field name="rectification" />
+                <field name="rectification" invisible="1" />
             </xpath>
         </field>
     </record>
