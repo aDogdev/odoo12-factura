@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* custom_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-04 18:13+0000\n"
+"PO-Revision-Date: 2024-04-04 18:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_invoice
+#: model:ir.model,name:custom_invoice.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: custom_invoice
+#: selection:account.invoice,type_invoice:0
+msgid "Original"
+msgstr "Original"
+
+#. module: custom_invoice
+#: selection:account.invoice,type_invoice:0
+msgid "Rectificative"
+msgstr "Rectificativa"
+
+#. module: custom_invoice
+#: model:ir.actions.act_window,name:custom_invoice.account_invoice_action
+#: model:ir.ui.menu,name:custom_invoice.costumer_sales_invoice_menu
+msgid "Sales Invoices"
+msgstr "Facturas de venta"
+
+#. module: custom_invoice
+#: model:ir.model.fields,field_description:custom_invoice.field_account_invoice__type_invoice
+msgid "Type Invoice"
+msgstr "Tipo de factura"
+
+#. module: custom_invoice
+#: model:ir.model.fields,field_description:custom_invoice.field_account_invoice__user_validated
+msgid "User who validated"
+msgstr "Usuario que validó"
+
