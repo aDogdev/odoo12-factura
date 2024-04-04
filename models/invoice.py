@@ -15,7 +15,7 @@ class Invoice(models.Model):
     def _compute_rectification(self):
         for invoice in self:
             if bool(invoice.refund_invoice_id):
-                invoice.rectification = "rectificativa"
+                invoice.rectification = "rectificative"
             else: 
                 invoice.rectification = "original"
 

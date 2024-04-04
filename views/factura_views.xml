@@ -44,5 +44,5 @@
 	</record>
 
 	<menuitem id="costumer_sales_invoice_menu" name="Sales Invoices"
-		parent="account.menu_finance_receivables" action="factura.account_invoice_action" />
+		parent="account.menu_finance_receivables" action="custom_invoice.account_invoice_action" />
 </odoo>
