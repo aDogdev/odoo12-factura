@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Factura',
+    'name': 'Invoice',
     'version': '1.0',
-    'description': """ Implementación del módulo de Contabilidad para guardar en el objeto factura el usuario que realizó el cambio a la etapa Validado.""",
+    'description': """ Implementation of the Accounting module to save the user who made the change to the Validated stage in the invoice object.""",
     'author': 'aDog',
     'category': 'Accounting',
     'depends': ['base', 'account', 'l10n_generic_coa'],

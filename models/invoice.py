@@ -3,13 +3,13 @@
 from odoo import models, fields, api
 
 
-class Factura(models.Model):
+class Invoice(models.Model):
     _inherit = 'account.invoice'
-    _description = 'Factura'
+    _description = 'Invoice'
 
-    user_validated = fields.Many2one('res.users', readonly=True, string='Usuario que validó')
+    user_validated = fields.Many2one('res.users', readonly=True, string='User who validated')
     
-    rectification = fields.Selection([('rectificativa','Rectificativa'),('original','Original')], compute='_compute_rectification')
+    rectification = fields.Selection([('rectificative','Rectificative'),('original','Original')], compute='_compute_rectification')
 
     @api.depends('refund_invoice_id')
     def _compute_rectification(self):
