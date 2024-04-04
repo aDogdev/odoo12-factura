@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class Invoice(models.Model):
+class CustomInvoice(models.Model):
     _inherit = 'account.invoice'
     _description = 'Invoice'
 
