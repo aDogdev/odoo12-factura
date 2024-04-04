@@ -9,15 +9,15 @@ class CustomInvoice(models.Model):
 
     user_validated = fields.Many2one('res.users', readonly=True, string='User who validated')
     
-    rectification = fields.Selection([('rectificative','Rectificative'),('original','Original')], compute='_compute_rectification')
+    type_invoice = fields.Selection([('rectificative','Rectificative'),('original','Original')], compute='_compute_type_invoice')
 
     @api.depends('refund_invoice_id')
-    def _compute_rectification(self):
+    def _compute_type_invoice(self):
         for invoice in self:
             if bool(invoice.refund_invoice_id):
-                invoice.rectification = "rectificative"
+                invoice.type_invoice = "rectificative"
             else: 
-                invoice.rectification = "original"
+                invoice.type_invoice = "original"
 
     @api.multi
     def invoice_validate(self):

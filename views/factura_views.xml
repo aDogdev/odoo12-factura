@@ -34,11 +34,11 @@
 		<field name="inherit_id" ref="account.invoice_supplier_tree" />
 		<field name="arch" type="xml">
 			<xpath expr="//tree" position="attributes">
-				<attribute name="decoration-info">rectification == 'rectificative'</attribute>
-				<attribute name="decoration-success">rectification == 'original'</attribute>
+				<attribute name="decoration-info">type_invoice == 'rectificative'</attribute>
+				<attribute name="decoration-success">type_invoice == 'original'</attribute>
 			</xpath>
 			<xpath expr="//field[@name='state']" position="after">
-				<field name="rectification" invisible="1" />
+				<field name="type_invoice" invisible="1" />
 			</xpath>
 		</field>
 	</record>
